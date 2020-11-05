@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/public
     docker:
-      image: nginx
+      - image: nginx
     steps:
       - run:
           name: install git
