@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/public
+    docker:
+      image: nginx
+    steps:
+      - run:
+          name: install git
+          command: apk update && apk add git
+      - checkout
