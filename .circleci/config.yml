@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/public
     docker:
-      - image: nginx
+      - image: alpine:3.7
     steps:
       - run:
           name: install git
