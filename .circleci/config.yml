@@ -9,9 +9,6 @@ jobs:
     docker:
       - image: 'cimg/python:3.6'
     steps:
-      - run:
-          name: install git
-          command: apk update && apk add git
       - checkout
       - aws-s3/sync:
           arguments: |
