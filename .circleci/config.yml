@@ -11,6 +11,5 @@ jobs:
     steps:
       - checkout
       - aws-s3/copy:
-          arguments: '--dryrun'
           from: public
           to: 's3://connorglynn.com'
