@@ -15,5 +15,10 @@ jobs:
           arguments: '--recursive'
           from: public
           to: 's3://connorglynn.com'
-      - post-steps:
-          - jira/notify
+
+workflows:
+  build:
+    jobs:
+      - build:
+          post-steps:
+            - jira/notify
